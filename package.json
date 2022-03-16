@@ -9,7 +9,7 @@
     "mysql2": "^2.3.3",
     "sequelize": "^6.17.0"
   },
-  "name": "tech-journal",
+  "name": "tech_journal",
   "description": "",
   "version": "1.0.0",
   "main": "index.js",
