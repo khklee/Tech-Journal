@@ -1,6 +1,5 @@
-const sequelize = require('../../config/connection');
 const router = require('express').Router();
-const { Post, User } = require('../../models');
+const { Post, User, Comment } = require('../../models');
 
 // get all posts
 router.get('/', (req, res) => {
@@ -13,15 +12,15 @@ router.get('/', (req, res) => {
           'created_at',
         ],
         include: [
-        //   // include the Comment model here:
-        //   {
-        //     model: Comment,
-        //     attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-        //     include: {
-        //       model: User,
-        //       attributes: ['username']
-        //     }
-        //   },
+          // include the Comment model here:
+          {
+            model: Comment,
+            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+            include: {
+              model: User,
+              attributes: ['username']
+            }
+          },
           {
             model: User,
             attributes: ['username']
@@ -47,14 +46,14 @@ router.get('/:id', (req, res) => {
         'created_at',
       ],
       include: [
-        // {
-        //     model: Comment,
-        //     attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-        //     include: {
-        //       model: User,
-        //       attributes: ['username']
-        //     }
-        // },
+        {
+            model: Comment,
+            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+            include: {
+              model: User,
+              attributes: ['username']
+            }
+        },
         {
           model: User,
           attributes: ['username']
