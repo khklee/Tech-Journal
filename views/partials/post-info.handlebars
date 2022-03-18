@@ -1,16 +1,9 @@
-{{!-- <article class="post">
-  <div class="title">
-    <a href="/post/{{id}}" target="_blank">{{title}}</a>
-    on {{format_date created_at}} by {{user.username}}
-    <p>{{content}}</p>
-  </div>
-</article> --}}
-
 <article class="post">
   <div class="card">
     <div class="card-header">
-        <a href="/post/{{id}}" target="_blank" class="card-title">{{title}}</a>
-        on {{format_date created_at}} by {{user.username}}
+        <a href="/post/{{id}}" target="_blank" class="card-title" style="float: left;">{{title}}</a>
+        <span style="float:right">{{format_date created_at}} by {{user.username}}</span>
+        <div class="clear"></div>
     </div>
     <div class="card-body">
       <p class="card-text">{{content}}</p>

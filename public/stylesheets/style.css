@@ -28,12 +28,21 @@
     text-decoration: none;
     font-weight: bold;
     color: #2d6a4f;
+    margin-left: 16px;
   }
 
   a:hover {
     color: #b7e4c7;
   }
-  
+
+  .clear {
+    clear: both;
+  }
+
+  span {
+    padding-top: 0.5rem;
+  }
+
   button {
     background-color: #2d6a4f;
     border: 0;
@@ -97,6 +106,7 @@
     align-items: center;
     padding: 0 1%;
     height: 7rem;
+    background-color: white;
   }
   
   .header-title {
@@ -154,6 +164,7 @@
   .card-title {
     font-size: 1.5rem;
     color: #b7e4c7;
+    padding-top: 0.5rem;
   }
   
   .card-text {
